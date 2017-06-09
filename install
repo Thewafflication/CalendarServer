@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo python3 -m pip install --upgrade radicale
+sudo cp -f calendar_server.service /lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start calendar_server
+sudo systemctl status calendar_server

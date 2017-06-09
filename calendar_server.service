@@ -1,0 +1,10 @@
+[Unit]
+Description=Job that runs Radicale Calendar Server
+Documentation=man:null(1)
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/bin/env python3 -m radicale --config "" --storage-filesystem-folder=~/.var/lib/radicale/collections
+
+[Install]
+WantedBy=multi-user.target
